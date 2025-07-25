@@ -25,7 +25,7 @@ router.post("/products", (req, res) => {
     //create new product
     const newProduct = await Product.create({
       name,
-      sku.
+      sku,
       price
     })
 
@@ -61,6 +61,7 @@ router.post("/products", (req, res) => {
       product_id: newProduct._id
     })
   }
+  
   catch(error){
     //if product or inventory is not created then we stop the transaction ensure atomicity
     await session.abortTransaction()
