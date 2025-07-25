@@ -16,6 +16,10 @@ const productSchema = new mongoose.Schema({
         type: mongoose.Types.Decimal128,
         required: true,
     },
+    threshold:{
+        type: Number, //minumum stock threshold value
+        default: 0,
+    },
 
     isBundle:{
         type: Boolean,
