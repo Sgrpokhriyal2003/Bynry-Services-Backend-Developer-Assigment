@@ -22,7 +22,7 @@ A Repo Have Solution For Given Assignment
 
 # Task 2 -: Database Design
 
-# Impact
+# Indentify Gaps
 - Do we need to tracks expiration dates
 - Should product be unique per company or shared globally across all companies
 - Do supplier supply directly to warehouses or just to companies
