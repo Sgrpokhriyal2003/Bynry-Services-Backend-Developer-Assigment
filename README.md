@@ -36,3 +36,12 @@ A Repo Have Solution For Given Assignment
 - Create Inventory Model Schema to track every change with timestamps and reason
 - Seperate Supplier Product Schema that contain which supplier supply which product
 - Avoid floating point issue with price use decimal128 module for saving price in decimal value
+
+# Task 3 -: API Implementataion
+
+# Handle Edge Cases
+- No warehouse for company : return empty alert list
+- No recent sales : skip the product
+- No supplier found : set supplier null
+- If Avg Daily Sales = 0 : set days_until_stockout: null to avoid error
+- If threshold is missing -: skipped the product for checking low stock 
