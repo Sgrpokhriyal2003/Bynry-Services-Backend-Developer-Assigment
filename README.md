@@ -20,3 +20,19 @@ A Repo Have Solution For Given Assignment
 -   Client doesn't know if it's a success/failure clearly
 -   Can overwrite existing inventory or inflate counts
 
+# Task 2 -: Database Design
+
+# Impact
+- Do we need to tracks expiration dates
+- Should product be unique per company or shared globally across all companies
+- Do supplier supply directly to warehouses or just to companies
+- Do we need to handle units of measurements (kg,liters)
+- Do we need to track shipments
+- Should we allow the same product to have different prices in different warehouses
+
+# Explain Descision
+- Use Primary Key for unique identification
+- Use indexes on product_id and warehouse_id to ensure one warehouse can only contain one product
+- Create Inventory Model Schema to track every change with timestamps and reason
+- Seperate Supplier Product Schema that contain which supplier supply which product
+- Avoid floating point issue with price use decimal128 module for saving price in decimal value
